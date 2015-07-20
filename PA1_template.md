@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
 
 
 
@@ -72,7 +77,7 @@ hist(totalStepsPerDay, breaks = 10, col = "salmon",
      xlab = "Total steps per day", main = NULL)
 ```
 
-![](PA1_template_files/figure-html/totalstepsHistBeforeImputing-1.png) 
+![plot of chunk totalstepsHistBeforeImputing](figure/totalstepsHistBeforeImputing-1.png) 
 
 
 ***
@@ -105,7 +110,7 @@ plot(activity, type = "l", xlab = "Interval", ylab = "Steps",
      main = "Average daily activity pattern")
 ```
 
-![](PA1_template_files/figure-html/activityTimeSeriesPlot-1.png) 
+![plot of chunk activityTimeSeriesPlot](figure/activityTimeSeriesPlot-1.png) 
 
 
 ***
@@ -169,7 +174,7 @@ hist(totalStepsPerDay.imputed, breaks = 10, col = "wheat",
      xlab = "Total steps per day", main = NULL)
 ```
 
-![](PA1_template_files/figure-html/totalStepsHistAfterImputing-1.png) 
+![plot of chunk totalStepsHistAfterImputing](figure/totalStepsHistAfterImputing-1.png) 
 
 
 #### Summary statistics comparison
@@ -206,7 +211,7 @@ xyplot(steps ~ interval | day, data = timeSeriesData, type = "l",
        layout = c(1, 2), xlab = "Interval", ylab = "Steps")
 ```
 
-![](PA1_template_files/figure-html/activityWeekdayWeekend-1.png) 
+![plot of chunk activityWeekdayWeekend](figure/activityWeekdayWeekend-1.png) 
        
        
        
