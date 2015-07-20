@@ -25,7 +25,7 @@ mydata <- read.csv(file, na.strings = "NA", comment.char = "",
 mydata <- within(mydata, {
     date <- as.Date(date)   # coerce date
     
-    # convert interval to elapsed seconds since midnight
+    # convert interval to elapsed minutes since midnight
     interval <- interval - (interval %/% 100) * 40
 
     # add day to indicate whether weekday/weekend
@@ -36,8 +36,8 @@ mydata <- within(mydata, {
 head(mydata)
 ```
 
-*__Interval__ is converted to seconds elapsed since midnight 
-on the corresponding day*  
+*__Interval__ is converted to minutes elapsed since midnight 
+on the corresponding day to improve graph accuracy*  
 *New column __Day__ is added to indicate whether the day 
 is a weekday or weekend*
 
@@ -82,7 +82,7 @@ maxActivityInterval <- with(activity, interval[which.max(steps)])
 maxActivityInterval
 ```
 
-*Note: Units in secs after midnight*  
+*Note: Units in mins after midnight*  
  
 
 ### Time series plot

@@ -1,9 +1,4 @@
----
-title: "Reproducible Research: Peer Assessment 1"
-output: 
-  html_document:
-    keep_md: true
----
+# Reproducible Research: Peer Assessment 1
 
 
 
@@ -23,7 +18,7 @@ mydata <- read.csv(file, na.strings = "NA", comment.char = "",
 mydata <- within(mydata, {
     date <- as.Date(date)   # coerce date
     
-    # convert interval to elapsed seconds since midnight
+    # convert interval to elapsed minutes since midnight
     interval <- interval - (interval %/% 100) * 40
 
     # add day to indicate whether weekday/weekend
@@ -44,8 +39,8 @@ head(mydata)
 ## 6    NA 2012-10-01       25 Weekday
 ```
 
-*__Interval__ is converted to seconds elapsed since midnight 
-on the corresponding day*  
+*__Interval__ is converted to minutes elapsed since midnight 
+on the corresponding day to improve graph accuracy*  
 *New column __Day__ is added to indicate whether the day 
 is a weekday or weekend*
 
@@ -77,7 +72,7 @@ hist(totalStepsPerDay, breaks = 10, col = "salmon",
      xlab = "Total steps per day", main = NULL)
 ```
 
-![plot of chunk totalstepsHistBeforeImputing](figure/totalstepsHistBeforeImputing-1.png) 
+![](PA1_template_files/figure-html/totalstepsHistBeforeImputing-1.png) 
 
 
 ***
@@ -99,7 +94,7 @@ maxActivityInterval
 ## [1] 515
 ```
 
-*Note: Units in secs after midnight*  
+*Note: Units in mins after midnight*  
  
 
 ### Time series plot
@@ -110,7 +105,7 @@ plot(activity, type = "l", xlab = "Interval", ylab = "Steps",
      main = "Average daily activity pattern")
 ```
 
-![plot of chunk activityTimeSeriesPlot](figure/activityTimeSeriesPlot-1.png) 
+![](PA1_template_files/figure-html/activityTimeSeriesPlot-1.png) 
 
 
 ***
@@ -174,7 +169,7 @@ hist(totalStepsPerDay.imputed, breaks = 10, col = "wheat",
      xlab = "Total steps per day", main = NULL)
 ```
 
-![plot of chunk totalStepsHistAfterImputing](figure/totalStepsHistAfterImputing-1.png) 
+![](PA1_template_files/figure-html/totalStepsHistAfterImputing-1.png) 
 
 
 #### Summary statistics comparison
@@ -211,7 +206,7 @@ xyplot(steps ~ interval | day, data = timeSeriesData, type = "l",
        layout = c(1, 2), xlab = "Interval", ylab = "Steps")
 ```
 
-![plot of chunk activityWeekdayWeekend](figure/activityWeekdayWeekend-1.png) 
+![](PA1_template_files/figure-html/activityWeekdayWeekend-1.png) 
        
        
        
