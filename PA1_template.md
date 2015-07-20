@@ -39,8 +39,13 @@ head(mydata)
 ## 6    NA 2012-10-01       25 Weekday
 ```
 
+<<<<<<< HEAD
 *__Interval__ is converted to minutes elapsed since midnight 
 on the corresponding day to improve graph accuracy*  
+=======
+*__Interval__ is converted to seconds elapsed since midnight 
+on the corresponding day (for more graph accuracy)*  
+>>>>>>> c22079c8d2615b4128bf249d7f7101c0ece65bb3
 *New column __Day__ is added to indicate whether the day 
 is a weekday or weekend*
 
