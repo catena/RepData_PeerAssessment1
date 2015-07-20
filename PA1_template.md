@@ -45,7 +45,7 @@ head(mydata)
 ```
 
 *__Interval__ is converted to seconds elapsed since midnight 
-on the corresponding day*  
+on the corresponding day (for more graph accuracy)*  
 *New column __Day__ is added to indicate whether the day 
 is a weekday or weekend*
 
